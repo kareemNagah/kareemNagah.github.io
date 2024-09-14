@@ -3911,18 +3911,21 @@ input, select, textarea {
 			display: flex; 
 			overflow-x: auto; 
 			scroll-behavior: smooth; 
+			scrollbar-width: thin; 
+			scrollbar-color: #7628a3 #F7EFE5;
 		
-			/* Styles for the scrollbar */
-			scrollbar-width: thick; /* Make the scrollbar thinner */
-			scrollbar-color: #7628a3 #F7EFE5; /* Set the scrollbar colors using your palette */
+			/* Key changes for responsiveness */
+			flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
 		}
 		
 		.testimonial {
-			min-width: 500px; 
+			min-width: 80%; /* Adjust to a percentage for flexibility */
+			max-width: 500px; /* Optional, to set a maximum width */
 			margin-right: 20px; 
 			padding: 20px;
 			border: 1px solid #ccc; 
 			border-radius: 5px;
+			flex-shrink: 0; /* Prevent testimonials from shrinking */
 		}
 		
 		.author {
